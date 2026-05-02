@@ -5,9 +5,7 @@
 // stream and turns the characters into language Tokens, such as identifiers,
 // keywords, and punctuation.
 //
-// Author: Prof. Joe Hummel
-// Northwestern University
-// CS 211
+// Scanner interface for the nuPython language frontend.
 //
 
 #pragma once

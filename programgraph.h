@@ -1,10 +1,7 @@
 /*programgraph.h*/
 
 //
-// Project: program graph data structure for nuPython
-//
-// Prof. Joe Hummel
-// Northwestern University
+// Program graph data structure for nuPython.
 //
 
 #pragma once

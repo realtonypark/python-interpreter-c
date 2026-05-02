@@ -3,9 +3,7 @@
 //
 // Token Queue for nuPython
 //
-// Author: Prof. Joe Hummel
-// Northwestern University
-// CS 211
+// Queue abstraction used to store tokenized nuPython input.
 //
 
 #pragma once

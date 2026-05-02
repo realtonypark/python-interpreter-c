@@ -3,9 +3,7 @@
 //
 // Token definitions for nuPython programming language
 //
-// Author: Prof. Joe Hummel
-// Northwestern University
-// CS 211
+// Core token definitions shared by the scanner, parser, and interpreter.
 //
 
 #pragma once
@@ -57,7 +55,7 @@ enum TokenID
   nuPy_COLON,         // :
   nuPy_INT_LITERAL,   // e.g. 123 
   nuPy_REAL_LITERAL,  // e.g. 3.14 or .5 or 89.
-  nuPy_STR_LITERAL,   // e.g. "hello cs211" or 'hello cs211'
+  nuPy_STR_LITERAL,   // e.g. "hello world" or 'hello world'
   nuPy_IDENTIFIER,    // e.g. print or sum or x
   //
   // keywords:

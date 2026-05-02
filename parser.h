@@ -6,8 +6,7 @@
 // ("grammar") rules of nuPython. If successful, a copy of the tokens is
 // returned so the program can be analyzed and executed.
 //
-// Author: Prof. Joe Hummel
-// Northwestern University
+// Recursive-descent parser interface for the nuPython language frontend.
 //
 
 #pragma once

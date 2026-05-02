@@ -1,22 +1,20 @@
-build:
-	rm -f ./a.out
-	gcc -std=c11 -g -Wall -pedantic -Werror main.c execute.c ram.o nupython.o -lm -Wno-psabi -Wno-unused-variable -Wno-unused-function 
+BINARY = nupython
+CC = gcc
+CFLAGS = -std=c11 -g -Wall -pedantic -Werror -Wno-psabi -Wno-unused-variable -Wno-unused-function
+LDFLAGS = -lm
+SUPPORT_OBJECTS = ram.o nupython.o
 
-run:
-	./a.out
+.PHONY: all run valgrind clean
 
-valgrind:
-	rm -f ./a.out
-	gcc -std=c11 -g -Wall -pedantic -Werror main.c execute.c ram.o nupython.o -lm -Wno-psabi -Wno-unused-variable -Wno-unused-function
-	valgrind --tool=memcheck --leak-check=no --track-origins=yes ./a.out "$(file)"
+all:
+	rm -f ./$(BINARY)
+	$(CC) $(CFLAGS) main.c execute.c $(SUPPORT_OBJECTS) $(LDFLAGS) -o $(BINARY)
 
-submit:
-	/gradescope/gs submit 1130317 7167063 main.c execute.c
+run: all
+	./$(BINARY)
 
-commit:
-	git add .
-	git commit -m "$(msg)"
+valgrind: all
+	valgrind --tool=memcheck --leak-check=no --track-origins=yes ./$(BINARY) "$(file)"
 
-push:
-	git push origin main
-
+clean:
+	rm -f ./$(BINARY)

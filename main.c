@@ -1,12 +1,9 @@
 /*main.c*/
 
-/** 
+/**
   * @brief Main program to scan, parse, and execute nuPython programs.
   *
-  * @note YOUR NAME
-  *
-  * @note Starter code and partial solution: Prof. Joe Hummel
-  * @note Northwestern University
+  * @note Tony Park
   */
 
 #include <stdio.h>
@@ -15,7 +12,7 @@
 #include <string.h>   // strcspn
 
 #include "token.h"    // token defs
-#include "scanner.h" 
+#include "scanner.h"
 #include "parser.h"
 #include "programgraph.h"
 #include "ram.h"
@@ -28,7 +25,7 @@
   * usage: program.exe [filename.py]
   *
   * If a filename is given, the file is opened and serves as
-  * input to the program. If a filename is not given, then 
+  * input to the program. If a filename is not given, then
   * input is taken from the keyboard until $ is input.
   *
   * @return 0 => success
@@ -77,7 +74,7 @@ int main(int argc, char* argv[])
 
   if (tokens == NULL)
   {
-    // 
+    //
     // program has a syntax error, error msg already output:
     //
     printf("**parsing failed...\n");
@@ -93,7 +90,7 @@ int main(int argc, char* argv[])
 
     struct STMT* program = programgraph_build(tokens);
 
-    programgraph_print(program);
+    // programgraph_print(program);
 
     printf("**executing...\n");
 

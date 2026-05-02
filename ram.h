@@ -6,8 +6,6 @@
   * To execute Python code, the nuPython interpreter needs to store the
   * values of Python variables. The RAM functions serve this purpose.
   *
-  * @note Prof. Joe Hummel
-  * @note Northwestern University
   */
 
 #pragma once

@@ -2,9 +2,6 @@
 
 /**
   * @brief Executes nuPython program, given as a Program Graph.
-  *
-  * @note Prof. Joe Hummel
-  * @note Northwestern University
   */
 
 #pragma once
